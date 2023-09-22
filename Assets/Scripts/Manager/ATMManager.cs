@@ -42,7 +42,7 @@ public class ATMManager : MonoBehaviour
     {
         if (nowAccount.Deposit(number))
         {
-            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
+            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount, nowAccount.Cash);
         }
         else
         {
@@ -54,7 +54,7 @@ public class ATMManager : MonoBehaviour
     {
         if (nowAccount.Withdraw(number))
         {
-            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
+            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount, nowAccount.Cash);
         }
         else
         {

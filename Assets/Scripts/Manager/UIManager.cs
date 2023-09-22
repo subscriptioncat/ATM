@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
 
     public event Action<int> OnDeposit;
     public event Action<int> OnWithdraw;
-    public event Action<string, string> OnDisPlay;
+    public event Action<int, int> OnDisPlay;
 
     private void Awake()
     {
@@ -67,15 +67,15 @@ public class UIManager : MonoBehaviour
         OnWithdraw?.Invoke(int.Parse(inputField_Withdraw.text));
     }
     
-    public void CallDisPlay(string balance, string cash)
+    public void CallDisPlay(int balance, int cash)
     {
         OnDisPlay?.Invoke(balance, cash);
     }
 
-    public void DisPlay(string balance, string cash)
-    {  
-        Balance.text = balance;
-        Cash.text = cash;
+    public void DisPlay(int balance, int cash)
+    {
+        Balance.text = string.Format("{0:#,###}", balance);
+        Cash.text = string.Format("{0:#,###}", cash);
     }
 
     public void PopupSetActive()
