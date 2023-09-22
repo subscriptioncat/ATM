@@ -85,8 +85,8 @@ public class UIManager : MonoBehaviour
 
     public void DisPlay(int balance, int cash)
     {
-        Balance.text = string.Format("{0:#,###}", balance);
-        Cash.text = string.Format("{0:#,###}", cash);
+        Balance.text = string.Format("{0:#,0.#}", balance);
+        Cash.text = string.Format("{0:#,0.#}", cash);
     }
 
     public void PopupSetActive()
