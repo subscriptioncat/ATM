@@ -33,28 +33,30 @@ public class AccountForm
         _cash = cash;
     }
 
-    public void Deposit(int cash)
+    public bool Deposit(int cash)
     {
         if(_cash >= cash)
         {
             _cash -= cash;
             _accountAmount += cash;
+            return true;
         }
         else
         {
-            //ToDo
+            return false;
         }
     }
-    public void Withdraw(int accountAmount)
+    public bool Withdraw(int accountAmount)
     {
         if (_accountAmount >= accountAmount)
         {
             _accountAmount -= accountAmount;
             _cash += accountAmount;
+            return true;
         }
         else
         {
-            //ToDo
+            return false;
         }
     }
 }

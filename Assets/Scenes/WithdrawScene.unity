@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 174108336}
   - component: {fileID: 174108335}
   - component: {fileID: 174108334}
+  - component: {fileID: 174108337}
   m_Layer: 5
   m_Name: WithdrawButton
   m_TagString: Untagged
@@ -394,7 +395,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 174108335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 174108337}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DirectInputWithdraw
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &174108335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +446,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174108332}
   m_CullTransparentMesh: 1
+--- !u!114 &174108337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174108332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 1122382758}
 --- !u!1 &196108529
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +911,7 @@ GameObject:
   - component: {fileID: 593825576}
   - component: {fileID: 593825575}
   - component: {fileID: 593825574}
+  - component: {fileID: 593825577}
   m_Layer: 5
   m_Name: Withdraw10Button
   m_TagString: Untagged
@@ -955,7 +983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 593825575}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593825577}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallWithdraw
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &593825575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,6 +1034,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593825572}
   m_CullTransparentMesh: 1
+--- !u!114 &593825577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593825572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &596628965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,6 +2794,7 @@ GameObject:
   - component: {fileID: 1229584996}
   - component: {fileID: 1229584995}
   - component: {fileID: 1229584994}
+  - component: {fileID: 1229584997}
   m_Layer: 5
   m_Name: Withdraw30Button
   m_TagString: Untagged
@@ -2811,7 +2866,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1229584995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1229584997}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallWithdraw
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1229584995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2850,6 +2917,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229584992}
   m_CullTransparentMesh: 1
+--- !u!114 &1229584997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229584992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &1246361991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,6 +3867,7 @@ GameObject:
   - component: {fileID: 1922139753}
   - component: {fileID: 1922139752}
   - component: {fileID: 1922139751}
+  - component: {fileID: 1922139754}
   m_Layer: 5
   m_Name: Withdraw50Button
   m_TagString: Untagged
@@ -3857,7 +3939,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1922139752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1922139754}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallWithdraw
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1922139752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3896,6 +3990,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922139749}
   m_CullTransparentMesh: 1
+--- !u!114 &1922139754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922139749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &2000014946
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4151,7 @@ GameObject:
   - component: {fileID: 2093017766}
   - component: {fileID: 2093017765}
   - component: {fileID: 2093017764}
+  - component: {fileID: 2093017767}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -4114,7 +4223,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2093017765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2093017767}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2093017765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4153,3 +4274,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093017762}
   m_CullTransparentMesh: 1
+--- !u!114 &2093017767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093017762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}

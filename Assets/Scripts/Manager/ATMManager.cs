@@ -9,28 +9,48 @@ public class ATMManager : MonoBehaviour
     {
         get
         {
-            if(instance == null)
+            if (instance == null)
             {
                 GameObject go = new GameObject();
-                instance = go.AddComponent< ATMManager>();
+                instance = go.AddComponent<ATMManager>();
             }
             return instance;
         }
     }
+    public AccountForm nowAccount;
 
-    private void Awake()
-    {
-
-    }
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        nowAccount = DataBase.Instance.Login("admin", "0000");
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Deposit(int number)
     {
+        if (nowAccount.Deposit(number))
+        {
+            UIManager.Instance.SetBanlance(nowAccount.AccountAmount.ToString());
+            UIManager.Instance.SetCash(nowAccount.Cash.ToString());
+        }
+        else
+        {
+            //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
+        }
         
     }
+
+    public void Withdraw(int number)
+    {
+        if (nowAccount.Withdraw(number))
+        {
+            UIManager.Instance.SetBanlance(nowAccount.AccountAmount.ToString());
+            UIManager.Instance.SetCash(nowAccount.Cash.ToString());
+        }
+        else
+        {
+            //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
+        }
+
+    }
+
 }

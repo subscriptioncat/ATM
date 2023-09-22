@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 38177379}
   - component: {fileID: 38177378}
   - component: {fileID: 38177377}
+  - component: {fileID: 38177380}
   m_Layer: 5
   m_Name: Deposit10Button
   m_TagString: Untagged
@@ -207,14 +208,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 38177380}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallDeposit
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -257,6 +258,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38177375}
   m_CullTransparentMesh: 1
+--- !u!114 &38177380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38177375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &46210628
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,16 +360,16 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
-  m_GlobalPointSize: 14
+  m_GlobalPointSize: 20
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -445,6 +460,7 @@ GameObject:
   - component: {fileID: 185472512}
   - component: {fileID: 185472511}
   - component: {fileID: 185472510}
+  - component: {fileID: 185472513}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -516,7 +532,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185472511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 185472513}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &185472511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +583,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185472508}
   m_CullTransparentMesh: 1
+--- !u!114 &185472513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185472508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &196108529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1091,7 @@ GameObject:
   - component: {fileID: 474443216}
   - component: {fileID: 474443215}
   - component: {fileID: 474443214}
+  - component: {fileID: 474443217}
   m_Layer: 5
   m_Name: Deposit50Button
   m_TagString: Untagged
@@ -1120,7 +1163,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 474443215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474443217}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallDeposit
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &474443215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1214,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474443212}
   m_CullTransparentMesh: 1
+--- !u!114 &474443217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474443212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,6 +2772,7 @@ GameObject:
   - component: {fileID: 1453921369}
   - component: {fileID: 1453921368}
   - component: {fileID: 1453921367}
+  - component: {fileID: 1453921370}
   m_Layer: 5
   m_Name: Deposit30Button
   m_TagString: Untagged
@@ -2774,7 +2844,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1453921368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1453921370}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: CallDeposit
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1453921368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2813,6 +2895,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453921365}
   m_CullTransparentMesh: 1
+--- !u!114 &1453921370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453921365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 0}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &1479555528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +3056,7 @@ GameObject:
   - component: {fileID: 1506740565}
   - component: {fileID: 1506740564}
   - component: {fileID: 1506740563}
+  - component: {fileID: 1506740566}
   m_Layer: 5
   m_Name: DepositButton
   m_TagString: Untagged
@@ -3031,7 +3128,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1506740564}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1506740566}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DirectInputDeposit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1506740564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3070,6 +3179,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506740561}
   m_CullTransparentMesh: 1
+--- !u!114 &1506740566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506740561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64675c31746986e4592f93a82bc7e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField_Deposit: {fileID: 46210630}
+  inputField_Withdraw: {fileID: 0}
 --- !u!1 &1578637567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,8 +3757,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3769,8 +3892,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
