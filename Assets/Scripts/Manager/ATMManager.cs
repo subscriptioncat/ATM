@@ -16,6 +16,7 @@ public class ATMManager : MonoBehaviour
             return instance;
         }
     }
+
     private void Awake()
     {
         if (instance == null)
@@ -29,42 +30,36 @@ public class ATMManager : MonoBehaviour
         }
     }
 
-
     public AccountForm nowAccount;
 
     void Start()
     {
         nowAccount = DataBase.Instance.Login("admin", "0000");
-        DisPlayReset();
+        UIManager.Instance.OnDeposit += Deposit;
+        UIManager.Instance.OnWithdraw += Withdraw;
     }
     public void Deposit(int number)
     {
         if (nowAccount.Deposit(number))
         {
-            UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
+            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
         }
         else
         {
-            //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
+            UIManager.Instance.PopupSetActive();
         }
-
     }
 
     public void Withdraw(int number)
     {
         if (nowAccount.Withdraw(number))
         {
-            UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
+            UIManager.Instance.CallDisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
         }
         else
         {
-            //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
+            UIManager.Instance.PopupSetActive();
         }
-
-    }
-    public void DisPlayReset()
-    {
-        UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
     }
 
 }
