@@ -26,11 +26,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text Cash;
     [SerializeField] private TMP_InputField inputField_Deposit;
     [SerializeField] private TMP_InputField inputField_Withdraw;
+    [SerializeField] private TMP_InputField inputField_ID;
+    [SerializeField] private TMP_InputField inputField_PW;
     [SerializeField] private GameObject InsufficientBalance_Popup;
+    [SerializeField] private GameObject SelectButton;
+    [SerializeField] private GameObject AccountInformation;
+    [SerializeField] private GameObject Login_PopUp;
 
     public event Action<int> OnDeposit;
     public event Action<int> OnWithdraw;
     public event Action<int, int> OnDisPlay;
+    public event Action<string, string> OnLogin;
 
     private void Awake()
     {
@@ -72,6 +78,11 @@ public class UIManager : MonoBehaviour
         OnDisPlay?.Invoke(balance, cash);
     }
 
+    public void CallLogin()
+    {
+        OnLogin?.Invoke(inputField_ID.text, inputField_PW.text);
+    }
+
     public void DisPlay(int balance, int cash)
     {
         Balance.text = string.Format("{0:#,###}", balance);
@@ -81,5 +92,12 @@ public class UIManager : MonoBehaviour
     public void PopupSetActive()
     {
         InsufficientBalance_Popup.SetActive(true);
+    }
+
+    public void SucceedLogin()
+    {
+        Login_PopUp.SetActive(false);
+        SelectButton.SetActive(true);
+        AccountInformation.SetActive(true);
     }
 }

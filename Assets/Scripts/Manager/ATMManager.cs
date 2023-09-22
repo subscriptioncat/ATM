@@ -37,6 +37,7 @@ public class ATMManager : MonoBehaviour
         nowAccount = DataBase.Instance.Login("admin", "0000");
         UIManager.Instance.OnDeposit += Deposit;
         UIManager.Instance.OnWithdraw += Withdraw;
+        UIManager.Instance.OnLogin += Login;
     }
     public void Deposit(int number)
     {
@@ -61,5 +62,16 @@ public class ATMManager : MonoBehaviour
             UIManager.Instance.PopupSetActive();
         }
     }
-
+    public void Login(string id, string ps)
+    {
+        nowAccount = DataBase.Instance.Login(id, ps);
+        if (nowAccount == null)
+        {
+            // 로그인 실패 팝업창
+        }
+        else
+        {
+            UIManager.Instance.SucceedLogin();
+        }
+    }
 }
