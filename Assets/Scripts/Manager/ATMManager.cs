@@ -67,7 +67,7 @@ public class ATMManager : MonoBehaviour
         nowAccount = DataBase.Instance.Login(id, ps);
         if (nowAccount == null)
         {
-            // 로그인 실패 팝업창
+            UIManager.Instance.FailLogin();
         }
         else
         {

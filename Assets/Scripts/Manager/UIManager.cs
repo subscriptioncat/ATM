@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject SelectButton;
     [SerializeField] private GameObject AccountInformation;
     [SerializeField] private GameObject Login_PopUp;
+    [SerializeField] private GameObject LoginError_PopUp;
 
     public event Action<int> OnDeposit;
     public event Action<int> OnWithdraw;
@@ -99,5 +100,10 @@ public class UIManager : MonoBehaviour
         Login_PopUp.SetActive(false);
         SelectButton.SetActive(true);
         AccountInformation.SetActive(true);
+    }
+
+    public void FailLogin()
+    {
+        LoginError_PopUp.SetActive(true);
     }
 }
