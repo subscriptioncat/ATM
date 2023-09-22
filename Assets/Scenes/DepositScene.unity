@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 472152468}
   m_Layer: 5
   m_Name: BalanceValue
-  m_TagString: Untagged
+  m_TagString: BalanceValue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,7 +3394,7 @@ GameObject:
   - component: {fileID: 1721875450}
   m_Layer: 5
   m_Name: CashValue
-  m_TagString: Untagged
+  m_TagString: CashValue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

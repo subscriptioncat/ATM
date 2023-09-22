@@ -13,25 +13,17 @@ public class ButtonController : MonoBehaviour
     public void CallDepositScene()
     {
         SceneManager.LoadScene("DepositScene");
-        //UIManager.Instance.Banlance = GameObject.Find("Canvas/Balance/BalanceValue").GetComponent<TMP_Text>();
-        //UIManager.Instance.Cash = GameObject.Find("Canvas/Cash/CashValue").GetComponent<TMP_Text>();
-        //var gameobject = SceneManager.GetActiveScene().GetRootGameObjects();
-        //gameobject[1].GetComponentInChildren();
-
-        //
-        //UIManager.Instance.Cash
+        ATMManager.Instance.DisPlayReset();
     }
     public void CallWithdrawScene()
     {
         SceneManager.LoadScene("WithdrawScene");
-        //UIManager.Instance.Banlance = GameObject.Find("Canvas/Balance/BalanceValue").GetComponent<TMP_Text>();
-        //UIManager.Instance.Cash = GameObject.Find("Canvas/Cash/CashValue").GetComponent<TMP_Text>();
+        ATMManager.Instance.DisPlayReset();
     }
     public void CallMainScene()
     {
         SceneManager.LoadScene("MainScene");
-        //UIManager.Instance.Banlance = GameObject.Find("Canvas/Balance/BalanceValue").GetComponent<TMP_Text>();
-        //UIManager.Instance.Cash = GameObject.Find("Canvas/Cash/CashValue").GetComponent<TMP_Text>();
+        ATMManager.Instance.DisPlayReset();
     }
     public void CallDeposit(int number)
     {

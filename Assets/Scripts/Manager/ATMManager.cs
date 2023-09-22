@@ -11,46 +11,60 @@ public class ATMManager : MonoBehaviour
         {
             if (instance == null)
             {
-                GameObject go = new GameObject();
-                instance = go.AddComponent<ATMManager>();
+                return null;
             }
             return instance;
         }
     }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+
     public AccountForm nowAccount;
 
-    // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
         nowAccount = DataBase.Instance.Login("admin", "0000");
+        DisPlayReset();
     }
     public void Deposit(int number)
     {
         if (nowAccount.Deposit(number))
         {
-            UIManager.Instance.SetBanlance(nowAccount.AccountAmount.ToString());
-            UIManager.Instance.SetCash(nowAccount.Cash.ToString());
+            UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
         }
         else
         {
             //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
         }
-        
+
     }
 
     public void Withdraw(int number)
     {
         if (nowAccount.Withdraw(number))
         {
-            UIManager.Instance.SetBanlance(nowAccount.AccountAmount.ToString());
-            UIManager.Instance.SetCash(nowAccount.Cash.ToString());
+            UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
         }
         else
         {
             //ÀÜ¾× ºÎÁ· Ã¢ ¶ç¿ì±â
         }
 
+    }
+    public void DisPlayReset()
+    {
+        UIManager.Instance.DisPlay(nowAccount.AccountAmount.ToString(), nowAccount.Cash.ToString());
     }
 
 }
